@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    input {
+      padding: 8px;
+      font-size: 14px;
+    }
+    button {
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Masukkan Password</h1>
+  <input type="password" id="passwordInput" placeholder="Password">
+  <button onclick="checkPassword()">Submit</button>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("passwordInput").value;
+      const correctPassword = "12345"; // 👉 ubah password di sini
+
+      if (password === correctPassword) {
+        window.location.href = "secret.html"; // redirect ke halaman lain
+      } else {
+        alert("Password salah!");
+      }
+    }
+  </script>
+</body>
+</html>
